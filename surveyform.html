@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Camp Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <h1 id="title">Code Camp Survey Form</h1>
+    <style>
+        div {
+            background-color: rgb(220, 228, 241);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            border: 1px solid;
+            width: 800px;
+            padding-top: 15px;
+            padding-left: 15px;
+            margin: auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 40px;
+            padding-top: 15px;
+        }
+        
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            margin: 4px 4px 10px 8px;
+        }
+        
+        .input {
+            height: 2em;
+            width: 30em;
+            margin: 4px 4px 10px 8px;
+        }
+        
+        .label {
+            margin: 4px 4px 10px 8px;
+        }
+        
+        #dropdown {
+            height: 32px;
+            width: 30em;
+            margin: 4px 4px 10px 8px;
+        }
+        
+        .checkbox-lan {
+            width: 18px;
+            height: 18px;
+            margin: 4px 4px 10px 8px;
+        }
+        
+        #comments {
+            height: 120px;
+            width: 360px;
+            margin: 4px 4px 10px 8px;
+        }
+        
+        input[type='radio'] {
+            transform: scale(1.5);
+            margin: 4px 4px 10px 8px;
+        }
+        
+        #submit {
+            height: 4em;
+            width: 15em;
+            background-color: rgb(92, 139, 209);
+            color: whitesmoke;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            margin-left: 250px;
+        }
+        
+        #description {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="description">--Let us know a little about you!--</p>
+    <div>
+        <form id="survey-form">
+            <label class="label" for="name" id="name-label"><b>Name:</b></label><br>
+            <input class="input" id="name" name="name" type='text' placeholder=" Please enter your Name" required> <br><br>
+            <label class="label" for="email" id="email-label"><b>Email:</b></label><br>
+            <input class="input" id="email" type='email' name="email" placeholder=" Please enter your E-mail" required><br><br>
+            <label class="label" for="password" id="password-label"></label><b>Password:</b>
+            </label><br>
+            <input class="input" id="password" name="password" type='password' placeholder=" Please enter your Password" required><br><br>
+            <label class="label" id="number-label" for="number"><b>Age:</b></label><br>
+            <input class="input" type="number" name="number" id="number" placeholder=" Please enter your Age" min="18" max="40" required><br><br>
+            <p><b>Which option best describes your current role?</b></p>
+            <select name="some_name" id="dropdown">
+                <option value="" selected>Select an option</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="prefer">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <p><b>Where did you know "Code Camp" from?</b></p>
+            <input type="radio" name="where" value="linkedin"> Linkedin<br>
+            <input type="radio" name="where" value="instagram"> İnstagram<br>
+            <input type="radio" name="where" value="friends"> Friends <br>
+            <input type="radio" name="where" value="other"> Other<br><br>
+            <p><b>Which programming language do you know?</b> </p>
+            <input class="checkbox-lan" type="checkbox" name="choice1" value="html">Html <br>
+            <input class="checkbox-lan" type="checkbox" name="choice2 " value="css">Css <br>
+            <input class="checkbox-lan" type="checkbox" name="choice3 " value="javascript">JavaScript <br>
+            <input class="checkbox-lan" type="checkbox" name="choice4" value="php">Php <br>
+            <input class="checkbox-lan" type="checkbox" name="choice5 " value="other">Other <br><br>
+            <p><b>Additional Comments</b></p><textarea name="comments" id="comments"></textarea><br>
+            <button id="submit" type="submit"> SUBMIT </button>
+        </form>
+    </div>
+</body>
+
+</html>
